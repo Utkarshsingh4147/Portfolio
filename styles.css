@@ -65,6 +65,38 @@ body {
     color: var(--primary-color);
 }
 
+@media (max-width: 425px) {
+    .first {
+        padding: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    .bg-changer {
+        margin-top: 10px;
+    }
+}
+
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -186,11 +218,50 @@ body {
         transform: translateY(10px);
     }
 }
+@media (max-width: 600px) {
+    .social {
+        display: none;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .text h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .text p {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+
+    .profile-pic {
+        width: 250px;
+        height: 250px;
+    }
+
+    .scroll-down {
+        font-size: 0.9rem;
+    }
+
+    .scroll-down span {
+        font-size: 1.5rem;
+    }
+}
+
 
 /* About Section*/
 
 .about {
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -201,14 +272,16 @@ body {
 
 .container2 {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 4% 0;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 4% 0;
 }
+
 .image2 {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     background-color: #333;
     display: flex;
     justify-content: center;
@@ -216,19 +289,61 @@ body {
     overflow: hidden;
     border-radius: 5%;
 }
+
 .image2 img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
 }
+
 .para1 {
-    width: 60%;
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.para1 .new1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .seg {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    padding: 4% 0;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.seg1,
+.seg2 {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+@media (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .para1 {
+        width: 100%;
+        padding: 1rem 0.5rem;
+    }
+
+    .image2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    
 }
 
 /* Skills section */
@@ -309,10 +424,80 @@ body {
 .cent7 {
     width: 20%;
 }
-.cent3 , .cent4 , .cent5 , .cent6 {
+.cent3 {
+    width: 70%;
+}
+.cent4 , .cent5 , .cent6 {
     /*Currently Zero but not always*/
     width: 0%;
 }
+
+/* Projects section */
+.projects {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.project-card {
+    border: 2px solid #d2c9c9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(70, 66, 66, 0.08);
+    overflow: hidden;
+    padding-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.project-desc {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.project-links a {
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    background-color: #333;
+    color: white;
+}
+
 
 /* Services Button */
 
@@ -320,6 +505,7 @@ body {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -338,7 +524,7 @@ body {
     width: 200px;
     height: 200px;
     border: 2px solid var(--text-color);
-    padding: 20px 10px;
+    padding: 50px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -611,115 +797,160 @@ form textarea {
     margin: 0;
 }
 
-/* Responsive Design */
+/* Up to 1200px */
+@media (min-width: 800px) and (max-width: 1200px) {
+    .hero-content,
+    .idea,
+    .contact-main,
+    .skillset,
+    .srvbtn {
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
 
+    .image3 {
+        margin: 40px auto;
+    }
+
+    .idea {
+        padding: 30px;
+    }
+}
+
+/* Up to 1045px */
+@media (max-width: 1045px) {
+    .image {
+        margin: 2% auto;
+    }
+
+    .idea,
+    .srvbtn {
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .image3 {
+        margin: 40px auto;
+    }
+}
+
+/* Up to 800px */
 @media (max-width: 800px) {
-    .skillset {
+    .skillset,
+    .contact-main,
+    .srvbtn {
         justify-content: center;
         gap: 20px;
     }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-nav ul {
         flex-direction: column;
         gap: 10px;
     }
-    .contact-main {
-        justify-content: center;
-        gap: 20px;
-    }
-    .srvbtn {
-        justify-content: center;
-        gap: 30px;
-    }
 }
 
-@media (max-width: 350px) {
-    .image , .image2 {
-        margin: 10px auto;
-    }
-    .ch1 {
-        margin-top: 20px;
-    }
-    .image3 img {
-        border-radius: 50%;
-    }
-    .idea {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 600px) {
+/* Up to 630px */
+@media (max-width: 630px) {
     .container {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav-links {
         justify-content: center;
+        flex-direction: column;
+        gap: 10px;
     }
+
     .languages {
         margin: 40px auto;
     }
-    .srvbtn {
-        justify-content: center;
-        gap: 40px;
-    }
-    .idea {
+
+    .idea,
+    .image3,
+    .contact-main {
         padding: 20px;
-        justify-content: center;
-        align-items: center;
-    }
-    .image3 {
         margin: 20px auto;
-    }
-    .contact-main {
         justify-content: center;
+        align-items: center;
+    }
+
+    .srvbtn {
+        justify-content: center;
+        gap: 40px;
     }
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
+/* Up to 425px */
+@media (max-width: 425px) {
+    .first {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    .bg-changer {
+        margin-top: 10px;
+    }
+
+    .social {
+        display: none;
+    }
+
     .hero-content {
-        justify-content: center;
+        gap: 30px;
+        flex-direction: column;
     }
-    .srvbtn {
-        gap: 40px;
+
+    .text h1 {
+        font-size: 2rem;
     }
-    .idea {
-        padding: 30px;
-        justify-content: center;
-        align-items: center;
-    }
-    .image3 {
-        margin: 40px auto;
-    }
-    .contact-main {
-        justify-content: center;
-        gap: 50px;
-    }
-    .srvbtn {
-        justify-content: center;
-        gap: 50px;
-    }
-    .skillset {
-        justify-content: center;
-        gap: 50px;
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
     }
 }
 
-@media (max-width : 1045px) {
-    .image {
-        margin: 2% auto;
+/* Up to 350px */
+@media (max-width: 350px) {
+    .image,
+    .image2 {
+        margin: 10px auto;
     }
-    .srvbtn {
-        gap: 40px;
+
+    .ch1 {
+        margin-top: 20px;
     }
+
+    .image3 img {
+        border-radius: 50%;
+    }
+
     .idea {
-        justify-content: center;
-        align-items: center;
-    }
-    .image3 {
-        margin: 40px auto;
+        padding: 10px;
     }
 }
