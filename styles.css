@@ -418,18 +418,20 @@ body {
 .cent1 {
     width: 80%;
 }
-.cent2 , .cent8 {
-    width: 10%;
-}
-.cent7 {
-    width: 20%;
-}
-.cent3 {
+.cent2 {
     width: 70%;
 }
-.cent4 , .cent5 , .cent6 {
-    /*Currently Zero but not always*/
-    width: 0%;
+.cent3 {
+    width: 60%;
+}
+.cent4 {
+    width: 50%;
+}
+.cent5 {
+    width: 40%;
+}
+.cent6 {
+    width: 30%;
 }
 
 /* Projects section */
